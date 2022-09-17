@@ -11,20 +11,33 @@ struct ContentView: View {
     var body: some View {
         VStack {
             backGround()
+                .ignoresSafeArea(edges: .top)
                 .frame(height: 500)
                 
 
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text("Creating a Sustainable Future")
                     .font(.title)
+                Divider()
 
-                HStack {
-                    Text("Joshua Tree National Park")
+                VStack {
+                    Text("The 21st century has lead to astronomical technological developments at an exponential rate.")
                         .font(.subheadline)
-                    Spacer()
-                    Text("California")
+                        .multilineTextAlignment(.center)
+                    Divider()
+
+                    Text("At the same time, our planet is filled with toxic waste that damages ecosystems at scale.")
                         .font(.subheadline)
+                        .multilineTextAlignment(.center)
+                    Divider()
+
+                    Text("What if we can change that?")
+                        .font(.subheadline)
+                        .multilineTextAlignment(.center)
+                    Divider()
+
                 }
+                .foregroundColor(.secondary)
             }
             .padding()
             Spacer()
